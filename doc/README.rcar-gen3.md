@@ -7,31 +7,26 @@ This layer provides the configuration to use Docker Engine on the R-Car.
 This layer depends on:
 
 * URI: git://git.yoctoproject.org/poky
-  * branch: thud
-  * revision: e7f0177ef3b6e06b8bc1722fca0241fef08a1530
+  * branch: dunfell
+  * revision: 5d47cdf448b6cff5bb7cc5b0ba0426b8235ec478
 
 * URI: git://github.com/renesas-rcar/meta-renesas
   * layers; meta-rcar-gen3
-  * branch: thud-dev
-  * revision: 21d840bc10492ea2f0f45f01df526cbfdb7735cf
+  * branch: dunfell-dev
+  * revision: 6c12c043f93966ec704d3a19765fbe200d42715d
 
 * URI: git://git.openembedded.org/meta-openembedded
   * layers: meta-oe, meta-networking, meta-python, meta-filesystems
-  * branch: thud
-  * revision: 4cd3a39f22a2712bfa8fc657d09fe2c7765a4005
-
-* URI: git://git.linaro.org/openembedded/meta-linaro
-  * layers; meta-optee
-  * branch: thud
-  * revision: 0a94decea3bd2504590d1637eadff9d502c19ee2
+  * branch: dunfell
+  * revision: b5f510e48080b6dc710ff4800feb90ef679c5456
 
 * URI: git://git.yoctoproject.org/meta-virtualization
-  * branch: thud
-  * revision: 7685c7d415e0002c448007960837ae8898cd57a5
+  * branch: dunfell
+  * revision: ffd787fb850e5a1657a01febc8402c74832147a1
 
 * URI: git://github.com/tkomagata/meta-docker
-  * branch: thud
-  * revision: 72b89595a50133695f011cabfcec27bc9652abb9
+  * branch: dunfell
+  * revision: 22c0d58b185686f8569d3607b1be3121f2b26eed
 
 * URI: git://github.com/meta-rust/meta-rust.git
   * branch: master
