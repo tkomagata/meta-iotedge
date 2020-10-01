@@ -7,4 +7,8 @@ do_install_append () {
     ## Manual provisioning configuration
     sed -i -e "s/<ADD DEVICE CONNECTION STRING HERE>/${IOTEDGE_DEVICE_CONNECTION_STRING}/g" \
         ${D}${sysconfdir}/iotedge/config.yaml
+
+    ## Edge device hostname
+    sed -i -e "s/<ADD HOSTNAME HERE>/${MACHINE}/g" \
+        ${D}${sysconfdir}/iotedge/config.yaml
 }
