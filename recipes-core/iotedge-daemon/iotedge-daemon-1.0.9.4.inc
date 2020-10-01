@@ -53,4 +53,10 @@ do_install_append () {
         ${D}${sysconfdir}/iotedge/config.yaml
     sed -i -e "s/<ADD URI TO TRUSTED CA CERTIFICATES HERE>/file:\/\/\${localstatedir}\/lib\/iotedge\/hsm\/certs\/azure-iot-test-only.root.ca.cert.pem/g" \
         ${D}${sysconfdir}/iotedge/config.yaml
+
+    # Systemd
+    if ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'true', 'false', d)}; then
+        sed -i -e "s/User=iotedge/User=root/g" ${D}${systemd_unitdir}/system/iotedge.service
+        sed -i -e "s/Group=iotedge/Group=root/g" ${D}${systemd_unitdir}/system/iotedge.service
+    fi
 }
