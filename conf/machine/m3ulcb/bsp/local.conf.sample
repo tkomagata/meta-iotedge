@@ -284,14 +284,6 @@ CORE_IMAGE_EXTRA_INSTALL_append = " kernel-modules"
 # Add iotedge to the image
 IMAGE_INSTALL_append = " iotedge-cli iotedge-daemon tzdata"
 
-PREFERRED_VERSION_cargo = "1.36.0"
-PREFERRED_VERSION_cargo-native = "1.36.0"
-PREFERRED_VERSION_rust = "1.36.0"
-PREFERRED_VERSION_rust-native = "1.36.0"
-PREFERRED_VERSION_rust-llvm-native = "1.36.0"
-PREFERRED_VERSION_rust-cross-${TARGET_ARCH} = "1.36.0"
-PREFERRED_VERSION_libstd-rs = "1.36.0"
-
 # Set Tinezone (Optional)
 #DEFAULT_TIMEZONE ="UTC"
 #DEFAULT_TIMEZONE ="Asia/Tokyo"
