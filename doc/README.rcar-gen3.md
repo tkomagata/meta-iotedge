@@ -8,25 +8,25 @@ This layer depends on:
 
 * URI: git://git.yoctoproject.org/poky
   * branch: dunfell
-  * revision: 5d47cdf448b6cff5bb7cc5b0ba0426b8235ec478
+  * revision: 569b1f5d67c57de957e243997c53ec2f81dc8dfe
 
 * URI: git://github.com/renesas-rcar/meta-renesas
   * layers; meta-rcar-gen3
   * branch: dunfell-dev
-  * revision: 6c12c043f93966ec704d3a19765fbe200d42715d
+  * revision: 072c0f8648a3e19ff145508d8d431308363a699c
 
 * URI: git://git.openembedded.org/meta-openembedded
   * layers: meta-oe, meta-networking, meta-python, meta-filesystems
   * branch: dunfell
-  * revision: b5f510e48080b6dc710ff4800feb90ef679c5456
+  * revision: 654ad8bea49f142d20b2b96c0dd44810a6be233a
 
 * URI: git://git.yoctoproject.org/meta-virtualization
   * branch: dunfell
-  * revision: ffd787fb850e5a1657a01febc8402c74832147a1
+  * revision: ff997b6b3ba800978546098ab3cdaa113b6695e1
 
 * URI: git://github.com/tkomagata/meta-docker
   * branch: dunfell
-  * revision: 22c0d58b185686f8569d3607b1be3121f2b26eed
+  * revision: 8b169e57ec16b1ab8a03304b603be090bc7ea47a
 
 * URI: git://github.com/meta-rust/meta-rust.git
   * branch: master
