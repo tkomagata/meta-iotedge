@@ -26,7 +26,7 @@ This layer depends on:
 
 * URI: git://github.com/tkomagata/meta-docker
   * branch: dunfell
-  * revision: 8b169e57ec16b1ab8a03304b603be090bc7ea47a
+  * revision: efae1ac83c4dcab664c76373d7e4005651e197d4
 
 * URI: git://github.com/meta-rust/meta-rust.git
   * branch: master
