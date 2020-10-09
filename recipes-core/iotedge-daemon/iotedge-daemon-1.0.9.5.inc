@@ -1,4 +1,4 @@
-export VERSION = "1.0.9.4"
+export VERSION = "1.0.9.5"
 
 IOTEDGE_DEVICE_CONNECTION_STRING ?= "<ADD DEVICE CONNECTION STRING HERE>"
 
@@ -7,8 +7,8 @@ do_compile_append () {
     export FORCE_NO_PROD_WARNING="true"
 
     mkdir -p ${S}/certs_work
-    cp ${WORKDIR}/iotedge-${PV}/tools/CACertificates/*.cnf ${S}/certs_work/
-    cp ${WORKDIR}/iotedge-${PV}/tools/CACertificates/certGen.sh ${S}/certs_work
+    cp ${WORKDIR}/git/tools/CACertificates/*.cnf ${S}/certs_work/
+    cp ${WORKDIR}/git/tools/CACertificates/certGen.sh ${S}/certs_work
 
     cd ${S}/certs_work
     bash ./certGen.sh create_root_and_intermediate
