@@ -18,7 +18,7 @@ do_compile_append () {
 do_install_append () {
     # Config file
     ## Manual provisioning configuration
-    sed -i -e "s/<ADD DEVICE CONNECTION STRING HERE>/${IOTEDGE_DEVICE_CONNECTION_STRING}/g" \
+    sed -i -e "s:<ADD DEVICE CONNECTION STRING HERE>:${IOTEDGE_DEVICE_CONNECTION_STRING}:g" \
         ${D}${sysconfdir}/iotedge/config.yaml
 
     ## Edge device hostname
@@ -47,11 +47,11 @@ do_install_append () {
     sed -i -e "s/#   trusted_ca_certs/  trusted_ca_certs/g" \
         ${D}${sysconfdir}/iotedge/config.yaml
 
-    sed -i -e "s/<ADD URI TO DEVICE CA CERTIFICATE HERE>/file:\/\/\${localstatedir}\/lib\/iotedge\/hsm\/certs\/iot-edge-device-${MACHINE}-full-chain.cert.pem/g" \
+    sed -i -e "s@<ADD URI TO DEVICE CA CERTIFICATE HERE>@file://${localstatedir}/lib/iotedge/hsm/certs/iot-edge-device-${MACHINE}-full-chain.cert.pem@g" \
         ${D}${sysconfdir}/iotedge/config.yaml
-    sed -i -e "s/<ADD URI TO DEVICE CA PRIVATE KEY HERE>/file:\/\/\${localstatedir}\/lib\/iotedge\/hsm\/cert_keys\/iot-edge-device-${MACHINE}.key.pem/g" \
+    sed -i -e "s@<ADD URI TO DEVICE CA PRIVATE KEY HERE>@file://${localstatedir}/lib/iotedge/hsm/cert_keys/iot-edge-device-${MACHINE}.key.pem@g" \
         ${D}${sysconfdir}/iotedge/config.yaml
-    sed -i -e "s/<ADD URI TO TRUSTED CA CERTIFICATES HERE>/file:\/\/\${localstatedir}\/lib\/iotedge\/hsm\/certs\/azure-iot-test-only.root.ca.cert.pem/g" \
+    sed -i -e "s@<ADD URI TO TRUSTED CA CERTIFICATES HERE>@file://${localstatedir}/lib/iotedge/hsm/certs/azure-iot-test-only.root.ca.cert.pem@g" \
         ${D}${sysconfdir}/iotedge/config.yaml
 
     # Systemd
